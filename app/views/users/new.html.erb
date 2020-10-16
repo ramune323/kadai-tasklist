@@ -1,19 +1,19 @@
-<h1>ユーザ登録ページ</h1>
+<h1>新規ユーザ登録ページ</h1>
 
 <%= form_with(model: @user, local: true) do |f| %>
   <%= render 'layouts/error_messages', model: f.object %>
 
-  <%= f.label :name, 'Name' %>
+  <%= f.label :name, '名前' %>
   <%= f.text_field :name %>
   <br>
-  <%= f.label :email, 'Email' %>
+  <%= f.label :email, 'メールアドレス' %>
   <%= f.email_field :email %>
   <br>
-  <%= f.label :password, 'Password' %>
+  <%= f.label :password, 'パスワード' %>
   <%= f.password_field :password %>
   <br>
-  <%= f.label :password_confirmation, 'Confirmation' %>
+  <%= f.label :password_confirmation, 'パスワード確認' %>
   <%= f.password_field :password_confirmation %>
   <br>
-  <%= f.submit 'Sign up' %>
+  <%= f.submit 'ユーザ登録' %>
 <% end %>
