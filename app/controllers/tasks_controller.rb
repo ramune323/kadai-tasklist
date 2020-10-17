@@ -1,6 +1,5 @@
 class TasksController < ApplicationController
   before_action :require_user_logged_in
-  before_action :set_task, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:show, :edit, :update, :destroy]
   
   # 一覧表示
@@ -56,12 +55,7 @@ class TasksController < ApplicationController
   
   
   private
-  
-  # idと一致するレコードを取得
-  def set_task
-    @task = Task.find_by(id: params[:id])
-  end
-  
+
   # Strong Prameter
   def task_params
     params.require(:task).permit(:content, :status)

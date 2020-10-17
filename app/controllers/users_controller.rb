@@ -1,10 +1,4 @@
 class UsersController < ApplicationController
-  def index
-  end
-
-  def show
-  end
-
   # ユーザ新規登録ページ
   def new
     @user = User.new
