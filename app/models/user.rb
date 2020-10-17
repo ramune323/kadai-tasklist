@@ -13,4 +13,7 @@ class User < ApplicationRecord
   
   # パスワード付きモデルに必要な機能
   has_secure_password
+  
+  # tasksと紐付け
+  has_many :tasks
 end
