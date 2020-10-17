@@ -59,7 +59,7 @@ class TasksController < ApplicationController
   
   # idと一致するレコードを取得
   def set_task
-    @task = Task.find_by(params[:id])
+    @task = Task.find_by(id: params[:id])
   end
   
   # Strong Prameter
